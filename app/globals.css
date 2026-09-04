@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: Georgia, serif;
+  --font-body: Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #1A1712;
+  color: #F7F2E7;
+}
+
+/* Ticket perforation: a dashed tear-line rendered along the top edge of
+   each progress entry, evoking a printed kitchen ticket. */
+.ticket-perf {
+  background-image: radial-gradient(circle, rgba(247, 242, 231, 0.18) 1px, transparent 1.4px);
+  background-size: 8px 100%;
+  background-repeat: repeat-x;
+  background-position: top left;
+}
+
+.scroll-quiet {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(247, 242, 231, 0.25) transparent;
+}
+.scroll-quiet::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-quiet::-webkit-scrollbar-thumb {
+  background-color: rgba(247, 242, 231, 0.2);
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
